@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .app_name {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .menu {
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    li {
+      position: relative;
+      list-style: none;
+      margin-right: 3rem;
+      cursor: pointer;
+
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -0.4rem;
+        left: 0;
+        width: 0;
+        height: 0.15rem;
+        background-color: black;
+        transition: width 0.2s;
+      }
+
+      &:hover::after {
+        width: 2rem;
+      }
+    }
+  }
+
+  .contact_btn {
+    background-color: white;
+    border: 1px solid black;
+    padding: 0.6rem 1.8rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}
